@@ -28,8 +28,10 @@ public class MainActivity extends AppCompatActivity {
         EditText priceValue = (EditText) findViewById(R.id.priceValue);
         String repositoryOfInt = priceValue.getText().toString();
         int value = Integer.parseInt(repositoryOfInt);
+        int price = value * quantity;
+        String priceMessage = "Total: $ " + price;
 
-        displayPrice(quantity * value);
+        displayPrice(priceMessage);
     }
 
     public void increment(View view) {
@@ -47,9 +49,9 @@ public class MainActivity extends AppCompatActivity {
         quantityTextView.setText("" + number);
     }
 
-    private void displayPrice(int number) {
+    private void displayPrice(String priceMassage) {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
+        priceTextView.setText(priceMassage);
     }
 
 }
