@@ -17,7 +17,7 @@ import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
 
-    int quantity = 0;
+    int quantity = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,11 +40,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void increment(View view) {
+        if (quantity == 100) {
+            return;
+        }
+
         quantity = quantity + 1;
         displayQuantity(quantity);
     }
 
     public void decrement(View view) {
+        if (quantity == 1) {
+            return;
+        }
+
         quantity = quantity - 1;
         displayQuantity(quantity);
     }
