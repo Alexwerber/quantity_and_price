@@ -2,6 +2,8 @@ package com.example.appinteractive;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
@@ -35,8 +37,15 @@ public class MainActivity extends AppCompatActivity {
         CheckBox chocolateCheckBox = (CheckBox) findViewById(R.id.chocolade_checkbox);
         boolean hasChocolate = chocolateCheckBox.isChecked();
 
-        TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
-        orderSummaryTextView.setText(createOrderSummary(nameOfPerson, calculatePrice(quantity, 5, hasChocolate, hasWhippedCream), hasWhippedCream, hasChocolate));
+        String orderMassage = createOrderSummary(nameOfPerson, calculatePrice(quantity, 5, hasChocolate, hasWhippedCream), hasWhippedCream, hasChocolate);
+
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:"));
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Just interactive" + nameOfPerson);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            intent.putExtra(Intent.EXTRA_SUBJECT, orderMassage);
+            startActivity(intent);
+        }
     }
 
     public void increment(View view) {
