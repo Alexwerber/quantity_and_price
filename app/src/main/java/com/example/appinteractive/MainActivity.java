@@ -42,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:"));
         intent.putExtra(Intent.EXTRA_SUBJECT, "Just interactive" + nameOfPerson);
+        intent.putExtra(Intent.EXTRA_SUBJECT, orderMassage);
         if (intent.resolveActivity(getPackageManager()) != null) {
-            intent.putExtra(Intent.EXTRA_SUBJECT, orderMassage);
             startActivity(intent);
         }
     }
@@ -85,12 +85,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String createOrderSummary (String name, int price, boolean toppingWhippedCream, boolean chocolate) {
-        String massage = "Name: " + name
-                + "\nAdd whipped cream? " + toppingWhippedCream
-                + "\nAdd chocolate? " + chocolate
-                + "\nQuantity: " + quantity
-                + "\nTotal: " + price
-                + "$\nThank You!";
+        String massage = getString(R.string.name_java_file) + name
+                + "\n" + getString(R.string.add_whipped_cream) + toppingWhippedCream
+                + "\n" + getString(R.string.add_chocolate) + chocolate
+                + "\n" + getString(R.string.quantity_java_file) + quantity
+                + "\n" + getString(R.string.total) + price
+                + "$\n" + getString(R.string.thank_you);
         return massage;
     }
 

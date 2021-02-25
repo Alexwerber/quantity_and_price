@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">App interactive</string>
+    
+    <!-- Words in main activity xml -->
+    <string name="name">Name</string>
+    <string name="toppings">TOPPINGS</string>
+    <string name="whipped_cream">Whipped cream</string>
+    <string name="chocolate">Chocolate</string>
+    <string name="quantity">QUANTITY</string>
+    <string name="order">ORDER</string>
+
+    <!-- Words in java file -->
+    <string name="name_java_file">Name </string>
+    <string name="add_whipped_cream">Add whipped cream? </string>
+    <string name="add_chocolate">Add chocolate? </string>
+    <string name="quantity_java_file">Quantity: </string>
+    <string name="total">Total: </string>
+    <string name="thank_you">Thank you!</string>
 </resources>

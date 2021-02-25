@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App interactive</string>
+
+    <!-- Слова, используемые в главной активности -->
+    <string name="name">Имя</string>
+    <string name="toppings">ДОБАВКИ</string>
+    <string name="whipped_cream">Взбитый крем</string>
+    <string name="chocolate">Шоколад</string>
+    <string name="quantity">КОЛИЧЕСТВО</string>
+    <string name="order">ЗАКАЗАТЬ</string>
+
+    <string name="name_java_file">Имя: </string>
+    <string name="add_whipped_cream">Добавить взбитый крем? </string>
+    <string name="add_chocolate">Добавить шоколад? </string>
+    <string name="quantity_java_file">Количество: </string>
+    <string name="total">Общая сумма: </string>
+    <string name="thank_you">Большое спасибо!</string>
+</resources>

@@ -20,11 +20,11 @@
                 android:id="@+id/name_of_client"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Name"
+                android:hint="@string/name"
                 android:inputType="textPersonName"/>
 
             <TextView
-                android:text="TOPPINGS"
+                android:text="@string/toppings"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="25sp"
@@ -33,7 +33,7 @@
 
             <CheckBox
                 android:id="@+id/whipped_cream"
-                android:text="Whiped cream"
+                android:text="@string/whipped_cream"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18dp"
@@ -43,7 +43,7 @@
 
             <CheckBox
                 android:id="@+id/chocolade_checkbox"
-                android:text="Chocolade"
+                android:text="@string/chocolate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18dp"
@@ -52,7 +52,7 @@
                 android:paddingLeft="24dp" />
 
             <TextView
-                android:text="QUANTITY"
+                android:text="@string/quantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="25sp"
@@ -98,16 +98,8 @@
 
             </LinearLayout>
 
-            <TextView
-                android:text="ORDER SUMMARY"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="25sp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="16dp" />
-
             <Button
-                android:text="ORDER"
+                android:text="@string/order"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="25sp"
